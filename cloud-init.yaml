@@ -21,10 +21,17 @@ package_update: true
 package_upgrade: true
 package_reboot_if_required: true
 packages:
+  - byobu
+  - fish
+  - httpie
+  - locate
+  - lsof
   - ntp
+  - rsync
 
 locale: "en_US.UTF-8"
 timezone: "Europe/Berlin"
+byobu_by_default: enable
 
 # tell docker to tag this node appropriately
 write_files:
