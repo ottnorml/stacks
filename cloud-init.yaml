@@ -1,5 +1,8 @@
 #cloud-config
 
+# cloud-init 18.3
+# http://cloudinit.readthedocs.io/en/18.3/index.html
+
 hostname: black-pearl
 manage_etc_hosts: true
 
