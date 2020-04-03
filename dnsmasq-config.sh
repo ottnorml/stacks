@@ -11,3 +11,6 @@ do
     fi
     sleep 1
 done
+
+container=$( docker container ls | grep pihole | col1 )
+docker exec $container pihole restartdns
