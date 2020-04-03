@@ -1,0 +1,17 @@
+diff --git a/cloud-init.yaml b/cloud-init.yaml
+index 4832153..b820d10 100644
+--- a/cloud-init.yaml
++++ b/cloud-init.yaml
+@@ -17,6 +17,12 @@ users:
+     ssh_pwauth: true
+     chpasswd: { expire: false }
+ 
++apt:
++  sources:
++    docker:   # for testing with `multipass`
++      source: "deb https://download.docker.com/linux/ubuntu $RELEASE stable"
++      keyid: 7EA0A9C3F273FCD8
++
+ package_update: true
+ package_upgrade: true
+ package_reboot_if_required: true

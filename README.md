@@ -20,3 +20,17 @@ When it's done the card can be inserted into the Raspberry, which should then be
 See the following blog posts for more information:
   - [Releasing HypriotOS 1.11.0: Docker 19.03.0 CE from Raspberry Pi Zero to 4B](https://blog.hypriot.com/post/releasing-HypriotOS-1-11/)
   - [Bootstrapping a Cloud with Cloud-Init and HypriotOS](https://blog.hypriot.com/post/cloud-init-cloud-on-hypriot-x64/)
+
+
+## Testing
+
+The setup via [cloud-init](https://cloudinit.readthedocs.io/) can be locally tested using [multipass](https://multipass.run/):
+
+```shell
+brew cask install multipass
+patch < multipass.patch
+multipass launch --name pi --cloud-init cloud-init.yaml
+multipass shell pi
+```
+
+Note that the `patch` command adds an `apt` section for `arm64`, which is needed to install Docker (on HypriotOS it comes pre-installed).
