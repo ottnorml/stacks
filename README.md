@@ -15,6 +15,14 @@ bash flash --userdata cloud-init.yaml https://github.com/hypriot/image-builder-r
 When it's done the card can be inserted into the Raspberry, which should then be configured automatically and have a Docker swarm running within a few minutes. It can be reached using `ssh pirate@black-pearl.local` with password “hypriot”.
 
 
+## Services
+
+Pi-hole's DNS service (which you want to use to block ads anyway) is configured so that all host names ending in `.pi` resolve to the Raspberry Pi. With this working the following services are available:
+
+  - [Traefik](http://traefik.io/) at http://traefik.pi/
+  - [Pi-hole](https://pi-hole.net/) at http://hole.pi/
+  - [Portainer](https://www.portainer.io/) at http://portainer.pi/
+
 ## Background
 
 See the following blog posts for more information:
