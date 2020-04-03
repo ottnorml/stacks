@@ -1,8 +1,8 @@
 diff --git a/cloud-init.yaml b/cloud-init.yaml
-index 4832153..b820d10 100644
+index 474ef11..bf67347 100644
 --- a/cloud-init.yaml
 +++ b/cloud-init.yaml
-@@ -17,6 +17,12 @@ users:
+@@ -17,11 +17,20 @@ users:
      ssh_pwauth: true
      chpasswd: { expire: false }
  
@@ -13,5 +13,13 @@ index 4832153..b820d10 100644
 +      keyid: 7EA0A9C3F273FCD8
 +
  package_update: true
- package_upgrade: true
+ package_upgrade: false
  package_reboot_if_required: true
+ packages:
+   - ntp
++  - containerd.io
++  - docker-ce
++  - docker-ce-cli
+ 
+ locale: "en_US.UTF-8"
+ timezone: "Europe/Berlin"
