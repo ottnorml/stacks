@@ -27,10 +27,11 @@ See the following blog posts for more information:
 The setup via [cloud-init](https://cloudinit.readthedocs.io/) can be locally tested using [multipass](https://multipass.run/):
 
 ```shell
-brew cask install multipass
+brew cask install multipass chef/chef/inspec
 patch < multipass.patch
 multipass launch --name pi --cloud-init cloud-init.yaml
-multipass shell pi
+multipass exec pi -- sudo docker stack ls
+inspec exec tests --shell --shell-command='multipass exec pi sudo sh'
 ```
 
 Note that the `patch` command adds an `apt` section for `arm64`, which is needed to install Docker (on HypriotOS it comes pre-installed).
