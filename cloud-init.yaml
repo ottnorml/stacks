@@ -22,6 +22,9 @@ package_upgrade: true
 package_reboot_if_required: true
 packages:
   - byobu
+  - containerd.io
+  - docker-ce
+  - docker-ce-cli
   - fish
   - httpie
   - locate
