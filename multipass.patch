@@ -1,8 +1,8 @@
 diff --git a/cloud-init.yaml b/cloud-init.yaml
-index 474ef11..bf67347 100644
+index 7c70118..e99f209 100644
 --- a/cloud-init.yaml
 +++ b/cloud-init.yaml
-@@ -17,11 +17,20 @@ users:
+@@ -17,12 +17,21 @@ users:
      ssh_pwauth: true
      chpasswd: { expire: false }
  
@@ -17,6 +17,7 @@ index 474ef11..bf67347 100644
  package_reboot_if_required: true
  packages:
    - ntp
+   - libnss-mdns
 +  - containerd.io
 +  - docker-ce
 +  - docker-ce-cli

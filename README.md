@@ -22,6 +22,8 @@ Pi-hole's DNS service (which you want to use to block ads anyway) is configured 
   - [Traefik](http://traefik.io/) at http://traefik.pi/
   - [Pi-hole](https://pi-hole.net/) at http://hole.pi/
   - [Portainer](https://www.portainer.io/) at http://portainer.pi/
+  - [Nextcloud](https://nextcloud.com/) at http://nextcloud.pi/
+
 
 ## Background
 

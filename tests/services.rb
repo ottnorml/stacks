@@ -25,3 +25,8 @@ describe docker_service('portainer_portainer') do
   its('ports') { should include '*:8000->8000/tcp' }
   its('ports') { should include '*:9000->9000/tcp' }
 end
+
+describe docker_service('nextcloud_app') do
+  it { should exist }
+  its('ports') { should eq '' }
+end

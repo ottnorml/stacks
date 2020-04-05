@@ -56,6 +56,7 @@ runcmd:
   - [ docker, stack, deploy, --compose-file=/etc/docker/stacks/traefik.yaml, traefik ]
   - [ docker, stack, deploy, --compose-file=/etc/docker/stacks/pihole.yaml, pihole ]
   - [ docker, stack, deploy, --compose-file=/etc/docker/stacks/portainer.yaml, portainer ]
+  - [ docker, stack, deploy, --compose-file=/etc/docker/stacks/nextcloud.yaml, nextcloud ]
 
   # setup dnsmasq to make host available as *.pi
   - [ bash, /etc/docker/stacks/dnsmasq-config.sh ]
