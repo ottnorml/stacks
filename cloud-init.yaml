@@ -22,6 +22,7 @@ package_upgrade: false
 package_reboot_if_required: true
 packages:
   - ntp
+  - libnss-mdns
 
 locale: "en_US.UTF-8"
 timezone: "Europe/Berlin"
